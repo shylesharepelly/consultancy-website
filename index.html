@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRMagnet</title>
+     <!--font-->
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+   
+</head>
+<body class="font-sans bg-gray-100">
+  
+  <header id="header" class="fixed top-0 w-full shadow-md z-50 " style="background-color: #0e1c32;">
+    <div class="container mx-auto flex items-center justify-between p-4">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-2">
+            <h1 class="text-2xl font-bold text-white">Arsha</h1>
+        </a>
+
+        <!-- Hamburger Icon for Mobile -->
+        <button id="hamburger" class="md:hidden text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+
+        <!-- Navigation Menu -->
+        <nav id="navmenu" class="hidden md:flex space-x-8">
+            <a href="./index.html" class="text-white hover:text-gray-300">Home</a>
+            <a href="./about.html" class="text-white hover:text-gray-300">About</a>
+            <a href="./services.html" class="text-white hover:text-gray-300">Services</a>   
+            <a href="./contact.html" class="text-white hover:text-gray-300">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="absolute top-full left-0 w-full bg-gray-800 bg-opacity-90 z-40 hidden flex-col items-center space-y-6 pt-4 pb-8 transition-transform transform -translate-y-full">
+        <button id="closeMobileMenu" class="absolute top-4 right-4 text-white text-3xl">
+            &times;
+        </button>
+        <nav class="flex flex-col items-center space-y-6 text-center">
+            <a href="./index.html" class="text-white text-2xl hover:text-gray-300">Home</a>
+            <a href="./about.html" class="text-white text-2xl hover:text-gray-300">About</a>
+            <a href="./services.html" class="text-white text-2xl hover:text-gray-300">Services</a>   
+            <a href="./contact.html" class="text-white text-2xl hover:text-gray-300">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<script>
+    // JavaScript to toggle mobile menu visibility
+    document.getElementById('hamburger').addEventListener('click', function() {
+        document.getElementById('mobileMenu').classList.remove('-translate-y-full');
+        document.getElementById('mobileMenu').classList.add('translate-y-0');
+        document.getElementById('mobileMenu').classList.remove('hidden');
+    });
+
+    document.getElementById('closeMobileMenu').addEventListener('click', function() {
+        document.getElementById('mobileMenu').classList.add('-translate-y-full');
+        document.getElementById('mobileMenu').classList.remove('translate-y-0');
+        document.getElementById('mobileMenu').classList.add('hidden');
+    });
+</script>
+
+  
+
+ <!-- Hero Section -->
+  <section id="hero" class="text-white mt-16 py-16" style="background-color: #0e1c32;">
+      <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between">
+        <!-- Text Content -->
+        <div class="lg:w-1/2 flex flex-col items-start space-y-4" >
+          <h1 class="text-6xl font-extrabold" style="font-family: 'Jost', sans-serif;">Better Solutions For Your Business</h1>
+          <p class="text-lg text-2xl font-bold text-gray-300">We are a team of talented designers making websites with Bootstrap</p>
+          <div class="flex space-x-4">
+            <a href="#about" class="bg-blue-700 text-white px-6 py-2 rounded-md hover:bg-blue-800">Get Started</a>
+          </div>
+        </div>
+        <!-- Image -->
+        <div class="lg:w-1/2 mt-8 lg:mt-0" >
+          <img src="./assets/hero-img.png" class="w-full h-auto" alt="Hero Image">
+        </div>
+      </div>
+    </section>
+
+
+    <section class=" py-20">
+        <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center">
+          <div class="lg:w-1/2 flex justify-center">
+            <img src="./assets/head1.png" alt="Illustration" class="w-full h-full object-cover">
+        </div>
+            <div class="lg:w-1/2 mb-12 lg:mb-0 text-center lg:text-left">
+                <h1 class="text-6xl font-bold text-gray-800 mb-4">Magnetize</h1>
+                <h1 class="text-4xl font-bold text-gray-800 mb-4">Your Workplace <br> Management Solution</h1>
+                <p class="text-gray-600 mb-6">Unlock efficiency with Magnet, your all-in-one workplace management platform. Simplify HR tasks and elevate employee experience. Ready to transform your workplace?</p>
+                <div class="space-x-4">
+                    <button class="bg-indigo-600 text-white px-6 py-2 rounded">Get started today</button>
+                    <button class="bg-gray-100 text-gray-800 px-6 py-2 rounded">Book a demo</button>
+                </div>
+            </div>
+            
+        </div>
+      </section>
+    
+
+
+      <section id="hero" class="text-white py-16" style="background-color: #0e1c32;">
+        <div class="container mx-auto p-8 flex flex-col lg:flex-row items-center justify-between">
+          <!-- Text Content -->
+          <div class="lg:w-1/2 flex flex-col items-start space-y-4" >
+            <h1 class="text-5xl font-extrabold" style="font-family: 'Jost', sans-serif;">We equip your teams with core capabilities to measurably improve performance.</h1>
+          </div>
+          <!-- Image -->
+          <div class="lg:w-1/2 mt-8 lg:mt-0" >
+            <img src="./assets/home-2.png" class="w-full h-auto" alt="Hero Image">
+          </div>
+        </div>
+      </section>
+    
+      
+
+    <!-- Partners Section -->
+    <section class="py-12 ">
+      <div class="container mx-auto px-6 text-center">
+          <h2 class="text-xl text-gray-700 mb-6">Trust built on 2000+ global partnerships.</h2>
+          <div class="flex flex-wrap justify-center gap-8">
+              <img src="https://via.placeholder.com/100x50" alt="Partner Logo" class="w-24 h-auto">
+              <img src="https://via.placeholder.com/100x50" alt="Partner Logo" class="w-24 h-auto">
+              <img src="https://via.placeholder.com/100x50" alt="Partner Logo" class="w-24 h-auto">
+              <img src="https://via.placeholder.com/100x50" alt="Partner Logo" class="w-24 h-auto">
+              <img src="https://via.placeholder.com/100x50" alt="Partner Logo" class="w-24 h-auto">
+              <img src="https://via.placeholder.com/100x50" alt="Partner Logo" class="w-24 h-auto">
+          </div>
+      </div>
+  </section>
+  
+    
+
+        <!-- Services Section -->
+
+    <section id="services" class=" py-6">
+      <div class="container mx-auto px-2 text-center">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Services</h2>
+          <p class="text-gray-600 mb-8">We enable businesses to strategically anticipate and meet talent needs to optimize productivity for maximum output.</p>
+          <div class="flex flex-wrap  justify-center">
+              <!-- Service Box 1 -->
+              <div class="w-full sm:w-1/3 lg:w-1/3 py-2 px-4">
+                  <div class="bg-white p-6 rounded-lg shadow flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-2xl transition-shadow">
+                      <div class="text-indigo-600 text-3xl mb-4">📈</div>
+                      <h3 class="text-lg font-semibold text-gray-800 mb-2">Workforce Management</h3>
+                      <p class="text-gray-600 flex-grow">We provide comprehensive workforce management solutions to help you optimize productivity and efficiency.</p>
+                  </div>
+              </div>
+              <!-- Service Box 2 -->
+              <div class="w-full sm:w-1/3 lg:w-1/3 py-2 px-4">
+                  <div class="bg-white p-6 rounded-lg shadow flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-2xl transition-shadow">
+                      <div class="text-blue-600 text-3xl mb-4">📊</div>
+                      <h3 class="text-lg font-semibold text-gray-800 mb-2">IT Recruitment Services</h3>
+                      <p class="text-gray-600 flex-grow">Our IT recruitment services connect you with top talent in the industry to meet your business needs.</p>
+                  </div>
+              </div>
+              <!-- Service Box 3 -->
+              <div class="w-full sm:w-1/3 lg:w-1/3 py-2 px-4">
+                  <div class="bg-white p-6 rounded-lg shadow flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-2xl transition-shadow">
+                      <div class="text-pink-600 text-3xl mb-4">👥</div>
+                      <h3 class="text-lg font-semibold text-gray-800 mb-2">Talent Acquisition Strategy</h3>
+                      <p class="text-gray-600 flex-grow">We develop strategic talent acquisition plans to ensure you have the right people in place at the right time.</p>
+                  </div>
+              </div>
+              <!-- Service Box 4 -->
+              <div class="w-full sm:w-1/3 lg:w-1/3 py-4 px-4">
+                <div class="bg-white p-6 rounded-lg shadow flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-2xl transition-shadow">
+                    <div class="text-indigo-600 text-3xl mb-4">📈</div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Workforce Management</h3>
+                    <p class="text-gray-600 flex-grow">We provide comprehensive workforce management solutions to help you optimize productivity and efficiency.</p>
+                </div>
+            </div>
+            <!-- Service Box 5 -->
+            <div class="w-full sm:w-1/3 lg:w-1/3 py-4 px-4">
+                <div class="bg-white p-6 rounded-lg shadow flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-2xl transition-shadow">
+                    <div class="text-blue-600 text-3xl mb-4">📊</div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">IT Recruitment Services</h3>
+                    <p class="text-gray-600 flex-grow">Our IT recruitment services connect you with top talent in the industry to meet your business needs.</p>
+                </div>
+            </div>
+            <!-- Service Box 6 -->
+            <div class="w-full sm:w-1/3 lg:w-1/3 py-4 px-4">
+                <div class="bg-white p-6 rounded-lg shadow flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-2xl transition-shadow">
+                    <div class="text-pink-600 text-3xl mb-4">👥</div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Talent Acquisition Strategy</h3>
+                    <p class="text-gray-600 flex-grow">We develop strategic talent acquisition plans to ensure you have the right people in place at the right time.</p>
+                </div>
+            </div>
+          </div>
+      </div>
+  </section>
+      
+  
+   <!-- top company Section -->
+  <section class="py-6 lg:py-10">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-wrap justify-center items-center text-center mb-10 lg:mb-20" >
+        <!-- Image Column -->
+        <div class="w-full md:w-1/2">
+          <img class="rounded-lg w-full" src="./assets/team.jpg" alt="Team Image">
+        </div>
+        <!-- Text Column -->
+        <div class="w-full md:w-1/2 px-4 md:px-8 mb-8 md:mb-0">
+          <i class="fab fa-connectdevelop text-4xl text-primary mb-4"></i>
+          <h2 class="text-4xl md:text-3xl font-bold mb-4 mt-3">We are Top Consulting Firm <br> in the World</h2>
+          <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Lorem ipsum dolor sit amet</p>
+          <div>
+            <a href="#" class="inline-block px-6 py-2 border border-blue-500 text-primary rounded-full hover:bg-blue-500 hover:text-white transition-colors">Read More</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+      <!-- Why us Section -->
+      <section id="whyus" class="container mx-auto px-6 py-10">
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold">Why Choose US</h2>
+            <p class="text-gray-600 mt-4">Explore the benefits of our services and how we can help your business succeed.</p>
+        </div>
+        <div class="flex flex-wrap justify-center">
+            <!-- Feature Card -->
+            <div class="w-full md:w-1/3 px-4 py-2">
+                <div class="bg-white p-6 rounded shadow-lg text-center">
+                    <img src="./assets/icon1.png" alt="Feature 1" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Tailored Solutions</h3>
+                    <p class="text-gray-600">Custom workforce solutions designed to meet your specific business needs.</p>
+                </div>
+            </div>
+            <!-- Feature Card -->
+            <div class="w-full md:w-1/3 px-4 py-2">
+                <div class="bg-white p-6 rounded shadow-lg text-center">
+                    <img src="./assets/icon2.png" alt="Feature 2" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Expert Team</h3>
+                    <p class="text-gray-600">Our team of experts ensures you get the best talent and workforce strategies.</p>
+                </div>
+            </div>
+            <!-- Feature Card -->
+            <div class="w-full md:w-1/3 px-4 py-2">
+                <div class="bg-white p-6 rounded shadow-lg text-center">
+                    <img src="./assets/icon3.png" alt="Feature 3" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Efficient Processes</h3>
+                    <p class="text-gray-600">Streamlined processes to ensure quick and efficient recruitment and management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+
+    <!-- Call to Action Banner -->
+    <section class=" text-white py-12" style="background-color: #37517e;">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to Optimize Your Workforce?</h2>
+            <p class="mb-6">Contact us today to learn more about how our staffing solutions and IT recruitment services can help your business thrive.</p>
+            <a href="#contact" class="bg-white text-blue-600 px-4 py-2 rounded hover:bg-gray-200">Get in Touch</a>
+        </div>
+    </section>
+
+    
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-10 bg-gray-100" style="background: radial-gradient(circle, rgb(240, 232, 197) 0%, rgba(255,207,74,1) 46%);">
+  <div class="container mx-auto text-center mb-12">
+    <h2 class="text-4xl font-extrabold text-gray-800 mb-4">What Our Clients Say</h2>
+    <p class="text-lg text-gray-500">Hear from our satisfied clients</p>
+  </div>
+
+  <!-- Carousel Container -->
+  <div id="testimonialsCarousel" class="relative" >
+    <!-- Carousel Items -->
+    <div class="relative w-full mt-4  overflow-hidden" >
+      <!-- Testimonial Item 1 -->
+      <div class="relative  float-left w-full transition-transform duration-300 ease-in-out" >
+        <div class="flex flex-col items-center p-10   rounded-3xl  shadow-xl text-center transform transition-transform duration-500 hover:scale-105" style="background: radial-gradient(circle, rgb(240, 232, 197) 0%, rgba(255,207,74,1) 46%);">
+          <img src="https://randomuser.me/api/portraits/men/1.jpg" class="w-24 h-24 rounded-full mb-4 border-4 border-gray-200 shadow-lg" alt="Person 1" />
+          <h3 class="text-xl font-semibold mb-2 text-gray-800">John Doe</h3>
+          <h4 class="text-md text-gray-500 mb-4">Apex Solutions</h4>
+          <p class="text-black">
+            <i class="bi bi-quote quote-icon-left text-black"></i>
+            "Since using this, our HR processes have become more efficient and organized. It's a game-changer!"
+            <i class="bi bi-quote quote-icon-right text-gray-400"></i>
+          </p>
+        </div>
+      </div>
+      
+      <!-- Testimonial Item 2 -->
+      <div class="relative  float-left w-full transition-transform duration-300 ease-in-out hidden" >
+        <div class="flex flex-col items-center p-8 bg-white rounded-3xl shadow-xl text-center transform transition-transform duration-500 hover:scale-105" style="background: radial-gradient(circle, rgb(240, 232, 197) 0%, rgba(255,207,74,1) 46%);">
+          <img src="https://randomuser.me/api/portraits/women/2.jpg" class="w-24 h-24 rounded-full mb-4 border-4 border-gray-200 shadow-lg" alt="Person 2" />
+          <h3 class="text-xl font-semibold mb-2 text-gray-800">Jane Smith</h3>
+          <h4 class="text-md text-gray-500 mb-4">Marketing Director</h4>
+          <p class="text-black">
+            <i class="bi bi-quote quote-icon-left text-gray-400"></i>
+            "Absolutely fantastic service and support!"
+            <i class="bi bi-quote quote-icon-right text-gray-400"></i>
+          </p>
+        </div>
+      </div>
+      <!-- Testimonial Item 3 -->
+      <div class="relative  float-left w-full transition-transform duration-300 ease-in-out hidden" >
+        <div class="flex flex-col items-center p-8 bg-white rounded-3xl shadow-xl text-center transform transition-transform duration-500 hover:scale-105" style="background: radial-gradient(circle, rgb(240, 232, 197) 0%, rgba(255,207,74,1) 46%);">
+          <img src="https://randomuser.me/api/portraits/men/3.jpg" class="w-24 h-24 rounded-full mb-4 border-4 border-gray-200 shadow-lg" alt="Person 3" />
+          <h3 class="text-xl font-semibold mb-2 text-gray-800">Alice Johnson</h3>
+          <h4 class="text-md text-gray-500 mb-4">Product Manager</h4>
+          <p class="text-black">
+            <i class="bi bi-quote quote-icon-left text-gray-400"></i>
+            "A game-changer for our team!"
+            <i class="bi bi-quote quote-icon-right text-gray-400"></i>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel Controls -->
+    <button class="absolute top-1/2 left-0 z-10 flex items-center justify-center h-10 w-10 bg-white text-gray-800 rounded-full shadow-lg opacity-75 hover:opacity-100 transition-opacity duration-300 ease-in-out" type="button" id="prevBtn">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+    </button>
+    <button class="absolute top-1/2 right-0 z-10 flex items-center justify-center h-10 w-10 bg-white text-gray-800 rounded-full shadow-lg opacity-75 hover:opacity-100 transition-opacity duration-300 ease-in-out" type="button" id="nextBtn">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+    </button>
+  </div>
+</section>
+
+  
+  <!-- JavaScript for Carousel with Automatic Sliding -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const carouselItems = document.querySelectorAll('#testimonialsCarousel > .relative > .relative');
+      let currentIndex = 0;
+      const autoSlideInterval = 3000; // Interval in milliseconds for auto sliding
+      let slideInterval;
+  
+      function showItem(index) {
+        carouselItems.forEach((item, i) => {
+          item.classList.toggle('hidden', i !== index);
+        });
+      }
+  
+      function startAutoSlide() {
+        slideInterval = setInterval(function () {
+          nextBtn.click();
+        }, autoSlideInterval);
+      }
+  
+      function stopAutoSlide() {
+        clearInterval(slideInterval);
+      }
+  
+      prevBtn.addEventListener('click', function () {
+        stopAutoSlide();
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : carouselItems.length - 1;
+        showItem(currentIndex);
+        startAutoSlide();
+      });
+  
+      nextBtn.addEventListener('click', function () {
+        stopAutoSlide();
+        currentIndex = (currentIndex < carouselItems.length - 1) ? currentIndex + 1 : 0;
+        showItem(currentIndex);
+        startAutoSlide();
+      });
+  
+      // Initial display
+      showItem(currentIndex);
+      startAutoSlide(); // Start automatic sliding
+    });
+  </script>
+  
+
+  <!-- Footer -->
+  <footer id="footer" class=" text-white py-8" style="background-color: #0e1c32;">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+        <!-- Left: Logo -->
+        <div class="text-2xl font-bold text-indigo-600 mb-4 md:mb-0">HRMagnet</div>
+        
+        <!-- Middle: Empty space or optional content -->
+        <div class="flex-1 mb-4 md:mb-0"></div>
+
+        <!-- Right: Navigation Links -->
+        <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
+            <a href="./about.html" class="hover:underline">About</a>
+            <a href="./services.html" class="hover:underline">Services</a>
+            <a href="./contact.html" class="hover:underline">Contact Us</a>
+        </div>
+    </div>
+    <div class="container mx-auto px-6 text-center mt-8">
+        <p>&copy; 2024 HRMagnet Inc. All rights reserved.</p>
+    </div>
+</footer>
+
+
+
+  <!-- Back to Top Button -->
+  <a href="#" class="fixed bottom-4 right-4 bg-blue-500  rounded-full p-2 shadow-lg hover:bg-blue-600">
+    <i class="fa-solid fa-circle-up"></i>
+  </a>
+</body>
+</html>

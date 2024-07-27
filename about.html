@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+   
+  <style>
+  .scrolling-wrapper {
+    overflow-x: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.scrolling-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.scrolling-wrapper {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.team-member {
+    min-width: 300px;
+    scroll-snap-align: center;
+    margin-right: 1rem;
+}
+
+
+</style>
+
+</head>
+<body >
+  <header id="header" class="fixed top-0 w-full shadow-md z-50 " style="background-color: #0e1c32;">
+    <div class="container mx-auto flex items-center justify-between p-4">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-2">
+            <h1 class="text-2xl font-bold text-white">Arsha</h1>
+        </a>
+
+        <!-- Hamburger Icon for Mobile -->
+        <button id="hamburger" class="md:hidden text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+
+        <!-- Navigation Menu -->
+        <nav id="navmenu" class="hidden md:flex space-x-8">
+            <a href="./index.html" class="text-white hover:text-gray-300">Home</a>
+            <a href="./about.html" class="text-white hover:text-gray-300">About</a>
+            <a href="./services.html" class="text-white hover:text-gray-300">Services</a>   
+            <a href="./contact.html" class="text-white hover:text-gray-300">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="absolute top-full left-0 w-full bg-gray-800 bg-opacity-90 z-40 hidden flex-col items-center space-y-6 pt-4 pb-8 transition-transform transform -translate-y-full">
+        <button id="closeMobileMenu" class="absolute top-4 right-4 text-white text-3xl">
+            &times;
+        </button>
+        <nav class="flex flex-col items-center space-y-6 text-center">
+            <a href="./index.html" class="text-white text-2xl hover:text-gray-300">Home</a>
+            <a href="./about.html" class="text-white text-2xl hover:text-gray-300">About</a>
+            <a href="./services.html" class="text-white text-2xl hover:text-gray-300">Services</a>   
+            <a href="./contact.html" class="text-white text-2xl hover:text-gray-300">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<script>
+    // JavaScript to toggle mobile menu visibility
+    document.getElementById('hamburger').addEventListener('click', function() {
+        document.getElementById('mobileMenu').classList.remove('-translate-y-full');
+        document.getElementById('mobileMenu').classList.add('translate-y-0');
+        document.getElementById('mobileMenu').classList.remove('hidden');
+    });
+
+    document.getElementById('closeMobileMenu').addEventListener('click', function() {
+        document.getElementById('mobileMenu').classList.add('-translate-y-full');
+        document.getElementById('mobileMenu').classList.remove('translate-y-0');
+        document.getElementById('mobileMenu').classList.add('hidden');
+    });
+</script>
+
+
+
+<section class="relative flex flex-col md:flex-row justify-center md:justify-between items-center min-h-screen bg-blue-900 text-white" style="background-color: #0e1c32;">
+
+  <div class="w-full md:w-1/2 mt-10 p-6 md:p-10 px-6 md:px-20 text-center md:text-left">
+      <h3 class="text-xl md:text-2xl font-bold text-orange-500">ABOUT |<span style="color: #e5804a;"> EPIC TEAMS </span></h3>
+      <h1 class="text-3xl md:text-4xl lg:text-6xl font-bold text-green-400 leading-tight mt-4">
+        Build an <br class="block md:hidden"> organization that<br class="block md:hidden"> gets <em>even better</em> in <br class="block md:hidden"> times of change
+      </h1>
+      <p class="mt-4 md:mt-6 text-lg md:text-xl">Stop working long hours without the <br class="block md:hidden"> results to show for it.</p>
+  </div>
+
+  <div class="w-full md:w-1/2 h-full flex items-center justify-center p-6 md:p-0">
+    <div class="relative w-full h-full max-w-md">
+      <img src="./assets/team.jpg" alt="Image" class="w-full h-full object-cover rounded-full border-4" style="border-color: #37517e;">
+    </div>
+  </div>
+
+</section>
+
+
+
+
+<!-- Mission -->
+    <section class=" flex flex-wrap py-12 mt-10 px-6 md:px-12">
+        <div class="container mx-auto">
+          <div class="flex flex-wrap justify-between items-center">
+            <!-- Image Column -->
+            <div class="w-full ml-16 md:w-1/3 text-center mb-8 md:mb-0">
+              <img src="./assets/vision.svg" class="w-full" alt="Vision">
+            </div>
+            
+            <!-- Content Column -->
+            <div class="w-full md:w-1/2">
+              <div class="space-y-8">
+                <!-- Mission Block -->
+                <div class="flex items-center space-x-6 md:space-x-8 mb-8 rounded-md p-6 bg-white shadow-lg">
+                  <i class="fa fa-rocket text-5xl text-gray-800"></i>
+                  <div>
+                    <h5 class="text-xl font-semibold mb-2">Mission</h5>
+                    <p class="text-gray-600">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form</p>
+                  </div>
+                </div>
+    
+                <!-- Vision Block -->
+                <div class="flex items-center space-x-6 md:space-x-8 mb-8 rounded-md p-6 bg-white shadow-lg">
+                  <i class="fa fa-eye text-5xl text-gray-800"></i>
+                  <div>
+                    <h5 class="text-xl font-semibold mb-2">Vision</h5>
+                    <p class="text-gray-600">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form</p>
+                  </div>
+                </div>
+    
+                <!-- Values Block -->
+                <div class="flex items-center space-x-6 md:space-x-8 mb-8 rounded-md p-6 bg-white shadow-lg">
+                  <i class="fa fa-globe text-5xl text-gray-800"></i>
+                  <div>
+                    <h5 class="text-xl font-semibold mb-2">Values</h5>
+                    <p class="text-gray-600">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- About Us -->
+    <section class="py-12 pb-5">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-wrap justify-between items-center">
+          <!-- Text Column -->
+          <div class="w-full md:w-1/2 mb-8 md:mb-0">
+            <h5 class="text-blue-600 text-lg font-semibold">About Us</h5>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">We are an industry leader in technical and consulting services</h2>
+            <p class="text-gray-600 text-base">
+              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius eligendi fugiat labore libero molestias provident quae quaerat quis! Aspernatur at enim excepturi facere in non reiciendis soluta totam, voluptas voluptate!
+            </p>
+          </div>
+          <!-- Image Column -->
+          <div class="w-full md:w-1/2">
+            <img src="./assets/about.png" class="w-full md:w-3/4 mx-auto" alt="About Us Image">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+      <section class="py-12 bg-gray-100 lg:py-24">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl lg:text-5xl font-bold mb-12">Meet our expert Team</h2>
+            <div class="scrolling-wrapper py-2">
+                <!-- Team Member 1 -->
+                <div class="team-member bg-white p-6 rounded-lg shadow-lg ">
+                    <div class="relative mb-4">
+                        <div class="w-full h-16 bg-green-500 rounded-t-lg"></div>
+                        <img class="w-32 h-32 rounded-full mx-auto -mt-16 border-4 border-white" src="https://randomuser.me/api/portraits/men/1.jpg" alt="Team Member 1">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Full Name</h3>
+                    <p class="text-gray-600 mb-4">Designation</p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-green-500"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-green-500"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-green-500"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-green-500"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+          
+                <!-- Team Member 2 -->
+                <div class="team-member bg-white p-6 rounded-lg shadow-lg">
+                    <div class="relative mb-4">
+                        <div class="w-full h-16 bg-green-500 rounded-t-lg"></div>
+                        <img class="w-32 h-32 rounded-full mx-auto -mt-16 border-4 border-white" src="https://randomuser.me/api/portraits/men/4.jpg" alt="Team Member 2">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Full Name</h3>
+                    <p class="text-gray-600 mb-4">Designation</p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-green-500"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-green-500"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-green-500"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-green-500"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="team-member bg-white p-6 rounded-lg shadow-lg">
+                    <div class="relative mb-4">
+                        <div class="w-full h-16 bg-green-500 rounded-t-lg"></div>
+                        <img class="w-32 h-32 rounded-full mx-auto -mt-16 border-4 border-white" src="https://randomuser.me/api/portraits/men/1.jpg" alt="Team Member 3">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Full Name</h3>
+                    <p class="text-gray-600 mb-4">Designation</p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-green-500"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-green-500"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-green-500"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-green-500"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="team-member bg-white p-6 rounded-lg shadow-lg">
+                    <div class="relative mb-4">
+                        <div class="w-full h-16 bg-green-500 rounded-t-lg"></div>
+                        <img class="w-32 h-32 rounded-full mx-auto -mt-16 border-4 border-white" src="https://randomuser.me/api/portraits/men/4.jpg" alt="Team Member 4">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Full Name</h3>
+                    <p class="text-gray-600 mb-4">Designation</p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-green-500"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-green-500"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-green-500"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-green-500"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                <!-- Team Member 5 -->
+                <div class="team-member bg-white p-6 rounded-lg shadow-lg">
+                    <div class="relative mb-4">
+                        <div class="w-full h-16 bg-green-500 rounded-t-lg"></div>
+                        <img class="w-32 h-32 rounded-full mx-auto -mt-16 border-4 border-white" src="https://randomuser.me/api/portraits/men/7.jpg" alt="Team Member 5">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Full Name</h3>
+                    <p class="text-gray-600 mb-4">Designation</p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-green-500"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-green-500"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-green-500"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-green-500"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <!-- Team Member 6 -->
+                <div class="team-member bg-white p-6 rounded-lg shadow-lg">
+                    <div class="relative mb-4">
+                        <div class="w-full h-16 bg-green-500 rounded-t-lg"></div>
+                        <img class="w-32 h-32 rounded-full mx-auto -mt-16 border-4 border-white" src="https://randomuser.me/api/portraits/men/9.jpg" alt="Team Member 6">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Full Name</h3>
+                    <p class="text-gray-600 mb-4">Designation</p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-green-500"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-green-500"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-green-500"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-green-500"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const scrollWrapper = document.querySelector('.scrolling-wrapper');
+        let scrollAmount = 0;
+        let direction = 1;
+
+        function autoScroll() {
+            scrollAmount += direction * 1;
+            scrollWrapper.scrollLeft = scrollAmount;
+            if (scrollAmount >= scrollWrapper.scrollWidth - scrollWrapper.clientWidth || scrollAmount <= 0) {
+                direction *= -1;
+            }
+        }
+
+        setInterval(autoScroll, 10);
+    </script>
+
+
+
+
+      <footer id="footer" class=" text-white py-8" style="background-color: #0e1c32;">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+            <!-- Left: Logo -->
+            <div class="text-2xl font-bold text-indigo-600 mb-4 md:mb-0">HRMagnet</div>
+            
+            <!-- Middle: Empty space or optional content -->
+            <div class="flex-1 mb-4 md:mb-0"></div>
+    
+            <!-- Right: Navigation Links -->
+            <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
+                <a href="./about.html" class="hover:underline">About</a>
+                <a href="./services.html" class="hover:underline">Services</a>
+                <a href="./contact.html" class="hover:underline">Contact Us</a>
+            </div>
+        </div>
+        <div class="container mx-auto px-6 text-center mt-8">
+            <p>&copy; 2024 HRMagnet Inc. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>

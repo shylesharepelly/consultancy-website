@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+     
+</head>
+<body>
+    <header id="header" class="fixed top-0 w-full shadow-md z-50 " style="background-color: #0e1c32;">
+        <div class="container mx-auto flex items-center justify-between p-4">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center space-x-2">
+                <h1 class="text-2xl font-bold text-white">Arsha</h1>
+            </a>
+    
+            <!-- Hamburger Icon for Mobile -->
+            <button id="hamburger" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+    
+            <!-- Navigation Menu -->
+            <nav id="navmenu" class="hidden md:flex space-x-8">
+                <a href="./index.html" class="text-white hover:text-gray-300">Home</a>
+                <a href="./about.html" class="text-white hover:text-gray-300">About</a>
+                <a href="./services.html" class="text-white hover:text-gray-300">Services</a>   
+                <a href="./contact.html" class="text-white hover:text-gray-300">Contact</a>
+            </nav>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="absolute top-full left-0 w-full bg-gray-800 bg-opacity-90 z-40 hidden flex-col items-center space-y-6 pt-4 pb-8 transition-transform transform -translate-y-full">
+            <button id="closeMobileMenu" class="absolute top-4 right-4 text-white text-3xl">
+                &times;
+            </button>
+            <nav class="flex flex-col items-center space-y-6 text-center">
+                <a href="./index.html" class="text-white text-2xl hover:text-gray-300">Home</a>
+                <a href="./about.html" class="text-white text-2xl hover:text-gray-300">About</a>
+                <a href="./services.html" class="text-white text-2xl hover:text-gray-300">Services</a>   
+                <a href="./contact.html" class="text-white text-2xl hover:text-gray-300">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+    <script>
+        // JavaScript to toggle mobile menu visibility
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.remove('-translate-y-full');
+            document.getElementById('mobileMenu').classList.add('translate-y-0');
+            document.getElementById('mobileMenu').classList.remove('hidden');
+        });
+    
+        document.getElementById('closeMobileMenu').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.add('-translate-y-full');
+            document.getElementById('mobileMenu').classList.remove('translate-y-0');
+            document.getElementById('mobileMenu').classList.add('hidden');
+        });
+    </script>
+    
+    
+    <section id="hero" class="flex items-center py-16">
+        <div class="container mx-auto">
+            <div class="flex flex-wrap">
+                <!-- Text Content -->
+                <div class="w-full lg:w-1/2 flex flex-col justify-center lg:pl-10 lg:pr-5 text-center lg:text-left">
+                    <h1 class="text-5xl font-bold leading-tight text-gray-800 mb-4">Elegant and creative <br> solutions</h1>
+                    <h2 class="text-2xl font-bold text-gray-500 mb-6">We are a team of talented designers making websites with Bootstrap</h2>
+                    <div class="flex justify-center lg:justify-start gap-4">
+                        <a href="#about" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition">Get Started</a>
+                        
+                    </div>
+                </div>
+                <!-- Image -->
+                <div class="w-full lg:w-1/2 flex justify-center lg:justify-end mt-8 lg:mt-0">
+                    <img src="./assets/hero-img1.png" class="w-full max-w-md lg:max-w-full h-auto object-contain" alt="Hero Image">
+                </div>
+            </div>
+        </div>
+    </section><!-- End Hero -->
+    
+
+    <section class="pt-5 bg-white  overflow-hidden">
+        <div class="container mx-auto mt-10 mb-10">
+            <h1 class="text-4xl  text-gray-800 mb-5">
+                <span style="color: #f97316;" class="italic">WE </span><span>PROMISE</span>
+            </h1>
+            <div class="flex flex-wrap justify-center mt-10 text-center">
+                <div class="w-full sm:w-1/3 px-3 my-3">
+                    <div class="px-5">
+                        <p><img src="./assets/staff-support.png" class="mx-auto w-24 h-24 object-contain"></p>
+                        <h4 class="text-2xl mt-2">24X7 support</h4>
+                    </div>
+                </div>
+                <div class="w-full sm:w-1/3 px-3 my-3">
+                    <div class="px-5 md-5">
+                        <p><img src="./assets/staff-team-align.png" class="mx-auto w-24 h-24 object-contain"></p>
+                        <h4 class="text-2xl  mt-2">Teams aligned with time-zone</h4>
+                    </div>
+                </div>
+                <div class="w-full sm:w-1/3 px-3 my-3">
+                    <div class="px-5">
+                        <p><img src="./assets/staff-dedicated.svg" class="mx-auto w-24 h-24 object-contain"></p>
+                        <h4 class="text-2xl  mt-2">Dedicated resources</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 lg:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl lg:text-5xl font-bold text-center mb-12">We take care of end-to-end staffing needs.</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 py-4 text-center">
+                <div>
+                    <img src="./assets/staff.webp" alt="Staff Planning" class="mx-auto mb-4 w-24 h-24 object-cover">
+                    <p class="text-lg font-semibold">Staff Planning</p>
+                </div>
+                <div>
+                    <img src="./assets/payroll.webp" alt="Payroll Management" class="mx-auto mb-4 w-24 h-24 object-cover">
+                    <p class="text-lg font-semibold">Payroll Management</p>
+                </div>
+                <div>
+                    <img src="./assets/statute.webp" alt="Statute Management" class="mx-auto mb-4 w-24 h-24 object-cover">
+                    <p class="text-lg font-semibold">Statute Management</p>
+                </div>
+                <div>
+                    <img src="./assets/compliance.webp" alt="Compliance Management" class="mx-auto mb-4 w-24 h-24 object-cover">
+                    <p class="text-lg font-semibold">Compliance Management</p>
+                </div>
+                <div>
+                    <img src="./assets/grievance.webp" alt="Grievance Management" class="mx-auto mb-4 w-24 h-24 object-cover">
+                    <p class="text-lg font-semibold">Grievance Management</p>
+                </div>
+                <div>
+                    <img src="./assets/grievance1.webp" alt="Engagement Programs" class="mx-auto mb-4 w-24 h-24 object-cover">
+                    <p class="text-lg font-semibold">Engagement Programs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <footer id="footer" class=" text-white py-8" style="background-color: #0e1c32;">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+            <!-- Left: Logo -->
+            <div class="text-2xl font-bold text-indigo-600 mb-4 md:mb-0">HRMagnet</div>
+            
+            <!-- Middle: Empty space or optional content -->
+            <div class="flex-1 mb-4 md:mb-0"></div>
+    
+            <!-- Right: Navigation Links -->
+            <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
+                <a href="./about.html" class="hover:underline">About</a>
+                <a href="./services.html" class="hover:underline">Services</a>
+                <a href="./contact.html" class="hover:underline">Contact Us</a>
+            </div>
+        </div>
+        <div class="container mx-auto px-6 text-center mt-8">
+            <p>&copy; 2024 HRMagnet Inc. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>
